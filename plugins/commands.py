@@ -25,7 +25,7 @@ async def start(client, message):
             [
                 InlineKeyboardButton(text=SUBSCRIBE_BTN_NAME, url=SUBSCRIBE_BTN_URL)
             ]
-            ]
+        ]
         reply_markup = InlineKeyboardMarkup(buttons)
         await message.reply(script.START_TXT.format(message.from_user.mention if message.from_user else message.chat.title, temp.U_NAME, temp.B_NAME), reply_markup=reply_markup)
         await asyncio.sleep(2) # 😢 https://github.com/EvamariaTG/EvaMaria/blob/master/plugins/p_ttishow.py#L17 😬 wait a bit, before checking.
@@ -38,8 +38,9 @@ async def start(client, message):
         await db.add_user(message.from_user.id, message.from_user.first_name)
         await client.send_message(LOG_CHANNEL, script.LOG_TEXT_P.format(message.from_user.id, message.from_user.mention))
     if len(message.command) != 2:
-        buttons = [[
-            InlineKeyboardButton(text=UPDATES_BTN_NAME, url=UPDATES_BTN_URL)
+        buttons = [
+            [
+                InlineKeyboardButton(text=UPDATES_BTN_NAME, url=UPDATES_BTN_URL)
             ]
         ]
         reply_markup = InlineKeyboardMarkup(buttons)
@@ -79,8 +80,9 @@ async def start(client, message):
             )
         return
     if len(message.command) == 2 and message.command[1] in ["subscribe", "error", "okay", "help"]:
-        buttons = [[
-            InlineKeyboardButton(text=UPDATES_BTN_NAME, url=UPDATES_BTN_URL)
+        buttons = [
+            [
+                InlineKeyboardButton(text=UPDATES_BTN_NAME, url=UPDATES_BTN_URL)
             ]
         ]
         reply_markup = InlineKeyboardMarkup(buttons)
@@ -227,11 +229,16 @@ async def start(client, message):
             f_caption=f_caption
     if f_caption is None:
         f_caption = f"{files.file_name}"
+    buttons = [
+                    [
+                        InlineKeyboardButton(text=SUBSCRIBE_BTN_NAME, url=SUBSCRIBE_BTN_URL)
+                    ]
+    ]
     await client.send_cached_media(
         chat_id=message.from_user.id,
         file_id=file_id,
         caption=f_caption,
-        reply_markup=InlineKeyboardMarkup( [ [ InlineKeyboardButton(text=SUBSCRIBE_BTN_NAME, url=SUBSCRIBE_BTN_URL) ] ] ),
+        reply_markup=InlineKeyboardMarkup(buttons),
         protect_content=True if pre == 'filep' else False,
         )
                     
