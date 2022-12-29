@@ -1,3 +1,5 @@
+# v1-backup
+
 import re
 from os import environ
 
@@ -10,6 +12,7 @@ def is_enabled(value, default):
     else:
         return default
 
+    
 # Bot information
 SESSION = environ.get('SESSION', 'Media_search')
 API_ID = int(environ.get('API_ID', '14553761'))                                 # Recommended
