@@ -38,7 +38,7 @@ async def save_group(bot, message):
             return
         buttons = [[
             InlineKeyboardButton('⚡ ʜᴏᴡ ᴛᴏ ᴜꜱᴇ ᴍᴇ ⚡', url=f"https://telegram.dog/{temp.U_NAME}?start"),
-            InlineKeyboardButton('⚡ ᴜᴘᴅᴀᴛᴇꜱ ⚡', url=UPDATES_BTN_URL)
+            InlineKeyboardButton(text=UPDATES_BTN_NAME, url=UPDATES_BTN_URL)
         ]]
         reply_markup=InlineKeyboardMarkup(buttons)
         await message.reply_text(
