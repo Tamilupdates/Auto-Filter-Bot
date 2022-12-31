@@ -37,12 +37,12 @@ async def save_group(bot, message):
             await bot.leave_chat(message.chat.id)
             return
         buttons = [[
-            InlineKeyboardButton('⚡ ʜᴏᴡ ᴛᴏ ᴜꜱᴇ ᴍᴇ ⚡', url=f"https://telegram.dog/{temp.U_NAME}?start"),
+            InlineKeyboardButton(text=DOWNLOAD_BTN_NAME, url=DOWNLOAD_BTN_URL),
             InlineKeyboardButton(text=UPDATES_BTN_NAME, url=UPDATES_BTN_URL)
         ]]
         reply_markup=InlineKeyboardMarkup(buttons)
         await message.reply_text(
-            text=f"<b>›› 𝚃𝙷𝙰𝙽𝙺𝚂 𝚃𝙾 𝙰𝙳𝙳 𝙼𝙴 𝚃𝙾 𝚈𝙾𝚄𝚁 𝙶𝚁𝙾𝚄𝙿. {message.chat.title} ❣️\n›› 𝙳𝙾𝙽'𝚃 𝙵𝙾𝚁𝙶𝙴𝚃 𝚃𝙾 𝙼𝙰𝙺𝙴 𝙼𝙴 𝙰𝙳𝙼𝙸𝙽.\n›› 𝙸𝚂 𝙰𝙽𝚈 𝙳𝙾𝚄𝙱𝚃𝚂 𝙰𝙱𝙾𝚄𝚃 𝚄𝚂𝙸𝙽𝙶 𝙼𝙴 𝙲𝙻𝙸𝙲𝙺 𝙱𝙴𝙻𝙾𝚆 𝙱𝚄𝚃𝚃𝙾𝙽..⚡⚡.</b>",
+            text=f"<b>›› ᴛʜᴀɴᴋꜱ ᴛᴏ ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ. {message.chat.title} ❣️\n›› ᴅᴏɴ'ᴛ ꜰᴏʀɢᴏᴛ ᴛᴏ ᴍᴀᴋᴇ ᴍᴇ ᴀᴅᴍɪɴ.\n›› ɪꜱ ᴀɴʏ ᴅᴏᴜʙᴛꜱ ᴀʙᴏᴜᴛ ᴜꜱɪɴɢ ᴍᴇ ᴄʟɪᴄᴋ ʙᴇʟᴏᴡ ʙᴜᴛᴛᴏɴ..⚡⚡.</b>",
             reply_markup=reply_markup)
     else:
         settings = await get_settings(message.chat.id)
