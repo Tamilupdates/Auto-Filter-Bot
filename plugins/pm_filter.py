@@ -665,12 +665,12 @@ async def auto_filter(client, msg, spoll=False):
         message = msg.message.reply_to_message  # msg will be callback query
         search, files, offset, total_results = spoll
     pre = 'filep' if settings['file_secure'] else 'file'
-    url=await get_shortlink(f"https://telegram.me/{temp.U_NAME}?start=files_{file.file_id}")
+    url=await get_shortlink(f"https://telegram.me/{temp.U_NAME}?start=files_")
     if settings["button"]:
         btn = [
             [
                 InlineKeyboardButton(
-                    text=f"[{get_size(file.file_size)}] {file.file_name}",callback_data=f'{pre}#{url}'
+                    text=f"[{get_size(file.file_size)}] {file.file_name}",callback_data=f'{pre}#{file.file_id}'
                     
                 ),
             ]
