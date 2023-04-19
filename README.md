@@ -1,5 +1,4 @@
 ## • What's New ?
-
 - ⟴ URL Shortener Added
 - ⟴ Self Delete Added (Auto delete)
 - ⟴ Filter On Off Option Added
@@ -9,7 +8,6 @@
 - ⟴ Custom URL Buttons (Updates channel, Add To Group, Force Sub, More...)
 
 ## Features
-
 - [x] 2GB+ Files Now Support
 - [x] URL Shortener Added
 - [x] Custom Buttons
@@ -27,8 +25,8 @@
 - [x] Stats, Users, Chats, Ban, Unban, Leave, Disable, Channel
 - [x] Spelling Check Feature
 - [x] File Store
-## Variables
 
+## Variables
 Read [this](https://telegram.dog/Nanthakps) before you start messing up with your edits.
 
 ### Required Variables
@@ -40,10 +38,12 @@ Read [this](https://telegram.dog/Nanthakps) before you start messing up with you
 * `DATABASE_URL`: [mongoDB](https://www.mongodb.com) URI. Get this value from [mongoDB](https://www.mongodb.com). For more help watch this [video](https://youtu.be/h9QjSSmk5tw)
 * `DATABASE_NAME`: Name of the database in [mongoDB](https://www.mongodb.com).
 * `LOG_CHANNEL` : A channel to log the activities of bot. Make sure bot is an admin in the channel.
+
 ### Optional Variables
 * `PICS`: Telegraph links of images to show in start message.( Multiple images can be used separated by space )
 * `FILE_STORE_CHANNEL`: Channel from were file store links of posts should be made.Separate multiple IDs by space
 * Check [info.py](https://github.com/Tamilupdates/Auto-Filter-Bot/blob/main/info.py) for more
+
 ## EXTRA FEATURES
 * `SHORTENER`: URL Shortener Website Link ( Without https://)
 * `URL_SHORTNER_WEBSITE_API`: URL Shortener Website API key
@@ -51,7 +51,6 @@ Read [this](https://telegram.dog/Nanthakps) before you start messing up with you
 * `SELF_DELETE_SECONDS`: Enter Seconds to be SELF_DELETE 
 * `START_TXT`: Enter Your Start Message
 * `ABOUT_TXT`: Enter Your About Message 
-
 
 ## Deploy
 You can deploy this bot anywhere.
@@ -64,12 +63,11 @@ You can deploy this bot anywhere.
 git clone https://github.com/Tamilupdates/Auto-Filter-Bot
 # Install Packages
 pip3 install -U -r requirements.txt
-Edit info.py with variables as given below then run bot
+# Edit info.py with variables as given below then run bot
 python3 bot.py
 </pre>
 </p>
 </details>
-
 
 ## Commands
 ```
@@ -99,21 +97,8 @@ broadcast - to broadcast a message to all Eva Maria users
 batch - to create link for multiple posts
 link - to create link for one post
 ```
+
 ## Support
-[![telegram badge](https://img.shields.io/badge/Telegram-Group-30302f?style=flat&logo=telegram)](https://telegram.dog/KPSTorrent)
-[![telegram badge](https://img.shields.io/badge/Telegram-Channel-30302f?style=flat&logo=telegram)](https://telegram.dog/KPSTorrent)
-
-## Thanks to 
- - Thanks To Dan For His Awesome [Library](https://github.com/pyrogram/pyrogram)
- - Thanks To [Subinps](https://github.com/subinps) for Original EvaMaria.
- - Thanks To [RushikeshNarule](https://github.com/rushikeshnarule) for Search in PM feature.
- - Thanks To All Everyone In This Journey
-
-### Note
-
-you a Developer.
-Fork the repo and edit as per your needs.
-
-## Inspiration
-🙃
+[![telegram badge](https://img.shields.io/badge/Telegram-Channel-30302f?style=flat&logo=telegram)](https://telegram.dog/KPSBots)
+[![telegram badge](https://img.shields.io/badge/Telegram-Group-30302f?style=flat&logo=telegram)](https://telegram.dog/KPSBotsSupport)
 
