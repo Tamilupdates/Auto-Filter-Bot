@@ -14,6 +14,8 @@ from database.users_chats_db import db
 from bs4 import BeautifulSoup
 import requests
 import aiohttp
+from shortzy import Shortzy
+import cloudscraper
 
 logger = logging.getLogger(__name__)
 logger.setLevel(logging.INFO)
@@ -379,25 +381,19 @@ def humanbytes(size):
     return str(round(size, 2)) + " " + Dic_powerN[n] + 'B'
 
 async def get_shortlink(link):
-    https = link.split(":")[0]
-    if "http" == https:
-        https = "https"
-        link = link.replace("http", https)
-    url = f'https://{SHORTENER}/api'
-    params = {'api': SHORTENER_API,
-              'url': link,
-              }
+    if not SHORTENER_API or not SHORTENER:
+        return link
 
     try:
-        async with aiohttp.ClientSession() as session:
-            async with session.get(url, params=params, raise_for_status=True, ssl=False) as response:
-                data = await response.json()
-                if data["status"] == "success":
-                    return data['shortenedUrl']
-                else:
-                    logger.error(f"Error: {data['message']}")
-                    return f'https://{SHORTENER}/st?api={SHORTENER_API}&url={link}'
+        x = await shortzy.convert(link, silently_fail=True)
+    except Exception:
+        x = await get_shortlink_sub(link)
+    return x
 
-    except Exception as e:
-        logger.error(e)
-        return f'https://{SHORTENER}/api?api={SHORTENER_API}&url={link}'
+
+async def get_shortlink_sub(link):
+    url = f'https://{SHORTENER}/api'
+    params = {'api': SHORTENER_API, 'url': link}
+    scraper = cloudscraper.create_scraper() 
+    r = scraper.get(url, params=params)
+    return r.json()["shortenedUrl"]
