@@ -11,3 +11,5 @@ bs4
 pynewtonmath
 pytz
 aiohttp
+shortzy
+cloudscraper
