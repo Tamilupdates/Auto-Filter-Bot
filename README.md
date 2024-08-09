@@ -27,10 +27,10 @@
 - [x] File Store
 
 ## Variables
-Read [this](https://telegram.dog/Nanthakps) before you start messing up with your edits.
+Read [this](https://telegram.me/Nanthakps) before you start messing up with your edits.
 
 ### Required Variables
-* `BOT_TOKEN`: Create a bot using [@BotFather](https://telegram.dog/BotFather), and get the Telegram API token.
+* `BOT_TOKEN`: Create a bot using [@BotFather](https://telegram.me/BotFather), and get the Telegram API token.
 * `API_ID`: Get this value from [telegram.org](https://my.telegram.org/apps)
 * `API_HASH`: Get this value from [telegram.org](https://my.telegram.org/apps)
 * `CHANNELS`: Username or ID of channel or group. Separate multiple IDs by space
@@ -99,6 +99,6 @@ link - to create link for one post
 ```
 
 ## Support
-[![telegram badge](https://img.shields.io/badge/Telegram-Channel-30302f?style=flat&logo=telegram)](https://telegram.dog/KPSBots)
-[![telegram badge](https://img.shields.io/badge/Telegram-Group-30302f?style=flat&logo=telegram)](https://telegram.dog/KPSBotsSupport)
+[![telegram badge](https://img.shields.io/badge/Telegram-Channel-30302f?style=flat&logo=telegram)](https://telegram.me/KPSBots)
+[![telegram badge](https://img.shields.io/badge/Telegram-Group-30302f?style=flat&logo=telegram)](https://telegram.me/KPSBotsSupport)
 
